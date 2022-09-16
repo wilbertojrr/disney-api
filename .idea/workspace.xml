@@ -4,46 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e8d7433-a557-4eae-a9cd-17d7e9cc6e85" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_63.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_63.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_63.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/controllers/CharacterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/controllers/GenreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/controllers/MovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/controllers/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/dto/ApiErrorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/dto/CharacterBasicDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/dto/CharacterDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/dto/GenreDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/dto/MovieBasicDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/dto/MovieDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/exception/ParamNotFound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/mappers/CharacterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/mappers/GenreMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/mappers/MovieMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/repository/CharacterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/repository/GenreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/repository/MovieRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/ICharacterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/IGenreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/IMovieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/implement/CharacterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/implement/GenreServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/implement/MovieServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2e8d7433-a557-4eae-a9cd-17d7e9cc6e85" name="Changes" comment="Implements Spring Security">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/models/entity/CharacterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/entity/CharacterEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/models/entity/GenreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/entity/GenreEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/models/entity/MovieEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/entity/MovieEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/implement/EmailServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/alkemy/disneyApi/service/implement/EmailServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,11 +55,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.disney-api">
+  <component name="RunManager" selected="Maven.disneyApi [spring-boot:run]">
     <configuration name="disney-api" type="Application" factoryName="Application">
-      <envs>
-        <env name="EMAIL_API_KEY" value="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" />
-      </envs>
       <option name="MAIN_CLASS_NAME" value="com.alkemy.disneyApi.DisneyApiApplication" />
       <module name="disneyApi" />
       <method v="2">
@@ -149,7 +109,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655485830562</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implements Spring Security">
+      <created>1663337368781</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663337368781</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implements Spring Security">
+      <created>1663337862919</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663337862919</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Definimos entidades y relaciones." />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Implements Spring Security" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implements Spring Security" />
   </component>
 </project>

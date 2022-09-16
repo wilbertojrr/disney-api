@@ -54,10 +54,11 @@ public class MovieEntity {
 
     private boolean deleted = Boolean.FALSE;
 
-    public void addCharacter (CharacterEntity entity){
+    public void addCharacter(CharacterEntity entity) {
         characters.add(entity);
     }
-    public void deleteCharacter(CharacterEntity entity){
+
+    public void deleteCharacter(CharacterEntity entity) {
         characters.remove(entity);
     }
 

@@ -7,13 +7,13 @@ import java.util.List;
 public interface IGenreService {
 
     //save new genre
-    GenreDTO saveNewGenre (GenreDTO genreDTO);
-    
+    GenreDTO saveNewGenre(GenreDTO genreDTO);
+
     //Get all genres
-    List<GenreDTO> getAllGenres ();
+    List<GenreDTO> getAllGenres();
 
     //Get genre by Id
-    GenreDTO getGenreById (Long genreId);
+    GenreDTO getGenreById(Long genreId);
 
     //Update Genre
     GenreDTO updateGenre(Long id, GenreDTO genreDTO);

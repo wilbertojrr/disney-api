@@ -23,11 +23,12 @@ public class UserDetailsCustomService implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private IEmailService emailService;
+
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
         UserEntity userEntity = userRepository.findByUsername(userName);
         if (userEntity == null) {
-            throw new UsernameNotFoundException("User or password not found");
+            throw new UsernameNotFoundException("User not found");
         }
 
         return new User(userEntity.getUsername(), userEntity.getPassword(), Collections.emptyList());
@@ -38,7 +39,7 @@ public class UserDetailsCustomService implements UserDetailsService {
     }
 
     public boolean save(UserDTO userDTO) throws UserAlreadyExistException {
-        if(checkIfUserExist(userDTO.getUsername())){
+        if (checkIfUserExist(userDTO.getUsername())) {
             throw new UserAlreadyExistException("User already exists");
         }
 
@@ -47,7 +48,7 @@ public class UserDetailsCustomService implements UserDetailsService {
         userEntity.setPassword(passwordEncoder.encode(userDTO.getPassword()));
         userEntity = userRepository.save(userEntity);
 
-       if (userEntity != null) {
+        if (userEntity != null) {
             emailService.sendEmailTo(userEntity.getUsername());
         }
         return userEntity != null;

@@ -11,13 +11,13 @@ import java.util.List;
 public class GenreMapper {
 
     //Refresh genre entity
-    public void genreEntityUpdate (GenreEntity entity, GenreDTO dto){
+    public void genreEntityUpdate(GenreEntity entity, GenreDTO dto) {
         entity.setName(dto.getName());
         entity.setImage(dto.getImage());
     }
 
     // GenreDTO to GenreEntity
-    public GenreEntity genreDTO2Entity(GenreDTO dto){
+    public GenreEntity genreDTO2Entity(GenreDTO dto) {
         GenreEntity genreEntity = new GenreEntity();
         genreEntity.setImage(dto.getImage());
         genreEntity.setName(dto.getName());
@@ -26,7 +26,7 @@ public class GenreMapper {
     }
 
     // GenreEntity to GenreDTO
-    public GenreDTO genreEntity2DTO (GenreEntity genreEntity){
+    public GenreDTO genreEntity2DTO(GenreEntity genreEntity) {
         GenreDTO genreDTO = new GenreDTO();
         genreDTO.setId(genreEntity.getId());
         genreDTO.setImage(genreEntity.getImage());
@@ -36,10 +36,10 @@ public class GenreMapper {
     }
 
     //GenreEntity List to DTO List
-    public List<GenreDTO> genreEntityList2DTOList (List<GenreEntity> genreEntities){
+    public List<GenreDTO> genreEntityList2DTOList(List<GenreEntity> genreEntities) {
         List<GenreDTO> genreDtos = new ArrayList<>();
 
-        for(GenreEntity genreEntity : genreEntities){
+        for (GenreEntity genreEntity : genreEntities) {
             genreDtos.add(this.genreEntity2DTO(genreEntity));
         }
         return genreDtos;

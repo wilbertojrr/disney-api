@@ -18,7 +18,7 @@ public class MovieMapper {
 
 
     // MovieDTO to MovieEntity
-    public MovieEntity movieDtoToEntity (MovieDTO movieDTO){
+    public MovieEntity movieDtoToEntity(MovieDTO movieDTO) {
 
         MovieEntity movieEntity = new MovieEntity();
 
@@ -35,7 +35,7 @@ public class MovieMapper {
 
     // MovieEntity to MovieDTO
 
-    public MovieDTO movieEntityToDTO (MovieEntity movieEntity, boolean loadCharacters){
+    public MovieDTO movieEntityToDTO(MovieEntity movieEntity, boolean loadCharacters) {
         MovieDTO movieDTO = new MovieDTO();
         movieDTO.setId(movieEntity.getId());
         movieDTO.setImage(movieEntity.getImage());
@@ -45,7 +45,7 @@ public class MovieMapper {
         movieDTO.setRating(movieEntity.getRating());
         movieDTO.setId(movieEntity.getId());
 
-        if (loadCharacters){
+        if (loadCharacters) {
             List<CharacterDTO> characterDTOS = this.characterMapper.characterEntityList2DTOList(movieEntity.getCharacters(), false);
             movieDTO.setCharacters(characterDTOS);
         }
@@ -54,28 +54,29 @@ public class MovieMapper {
 
     // MovieEntityList to MovieDTOList
 
-    public List<MovieDTO> movieEntityListToDTOList (List<MovieEntity> movieEntities, boolean loadCharacters){
+    public List<MovieDTO> movieEntityListToDTOList(List<MovieEntity> movieEntities, boolean loadCharacters) {
         List<MovieDTO> movieDTOS = new ArrayList<>();
 
-        for(MovieEntity entity: movieEntities){
-            movieDTOS.add(this.movieEntityToDTO(entity,loadCharacters));
+        for (MovieEntity entity : movieEntities) {
+            movieDTOS.add(this.movieEntityToDTO(entity, loadCharacters));
         }
-        return  movieDTOS;
+        return movieDTOS;
     }
-    public List<MovieEntity> movieDTOListToEntityList (List<MovieDTO> movieDTOS){
+
+    public List<MovieEntity> movieDTOListToEntityList(List<MovieDTO> movieDTOS) {
         List<MovieEntity> movieEntities = new ArrayList<>();
 
-        for(MovieDTO dto: movieDTOS){
+        for (MovieDTO dto : movieDTOS) {
             movieEntities.add(this.movieDtoToEntity(dto));
         }
-        return  movieEntities;
+        return movieEntities;
     }
 
 
     public List<MovieBasicDTO> movieEntityListToBasicDTOList(List<MovieEntity> movieEntities) {
         List<MovieBasicDTO> basicDTOS = new ArrayList<>();
         MovieBasicDTO basicDTO;
-        for(MovieEntity entity : movieEntities){
+        for (MovieEntity entity : movieEntities) {
             basicDTO = new MovieBasicDTO();
             basicDTO.setId(entity.getId());
             basicDTO.setImage(entity.getImage());

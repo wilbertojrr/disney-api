@@ -11,7 +11,7 @@ public interface ICharacterService {
 
     // save new character
 
-    CharacterDTO saveCharacter (CharacterDTO dto);
+    CharacterDTO saveCharacter(CharacterDTO dto);
 
     List<CharacterBasicDTO> getAllBasicData();
 
@@ -21,7 +21,7 @@ public interface ICharacterService {
 
     void deleteCharacter(Long id);
 
-    CharacterEntity getCharacterEntity (Long id);
+    CharacterEntity getCharacterEntity(Long id);
 
     List<CharacterDTO> getCharacterByFilter(String name, Integer age, Set<Long> movieId);
 }

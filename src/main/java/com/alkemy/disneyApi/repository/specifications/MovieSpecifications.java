@@ -13,12 +13,12 @@ import java.util.List;
 @Component
 public class MovieSpecifications {
     public Specification<MovieEntity> getByFilters(MovieFiltersDTO movieFiltersDTO) {
-        return (root, query, criteriaBuilder) ->{
+        return (root, query, criteriaBuilder) -> {
 
             List<Predicate> predicates = new ArrayList<>();
 
             //filter by title
-            if(StringUtils.hasLength(movieFiltersDTO.getTitle())) {
+            if (StringUtils.hasLength(movieFiltersDTO.getTitle())) {
                 predicates.add(
                         criteriaBuilder.like(
                                 criteriaBuilder.lower(root.get("title")),
@@ -29,9 +29,9 @@ public class MovieSpecifications {
 
 
             //filter by genreId
-            if(movieFiltersDTO.getGenreId() != null){
+            if (movieFiltersDTO.getGenreId() != null) {
                 predicates.add(
-                        criteriaBuilder.equal(root.get("genreId"),movieFiltersDTO.getGenreId())
+                        criteriaBuilder.equal(root.get("genreId"), movieFiltersDTO.getGenreId())
                 );
             }
             query.distinct(true);
@@ -39,7 +39,7 @@ public class MovieSpecifications {
             // filter by order
             String orderField = "title";
             query.orderBy(
-                    movieFiltersDTO.asc() ? criteriaBuilder.asc(root.get(orderField)):
+                    movieFiltersDTO.asc() ? criteriaBuilder.asc(root.get(orderField)) :
                             criteriaBuilder.desc(root.get(orderField))
             );
             return criteriaBuilder.and(predicates.toArray(new Predicate[0]));

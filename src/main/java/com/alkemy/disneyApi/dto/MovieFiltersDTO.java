@@ -14,10 +14,11 @@ public class MovieFiltersDTO {
     private Long genreId;
     private String order;
 
-    public boolean asc (){
+    public boolean asc() {
         return order.compareToIgnoreCase("ASC") == 0;
     }
-    public boolean desc (){
+
+    public boolean desc() {
         return order.compareToIgnoreCase("DESC") == 0;
     }
 

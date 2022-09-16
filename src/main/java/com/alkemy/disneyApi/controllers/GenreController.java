@@ -1,5 +1,6 @@
 
 package com.alkemy.disneyApi.controllers;
+
 import com.alkemy.disneyApi.dto.GenreDTO;
 import com.alkemy.disneyApi.service.IGenreService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,14 +39,14 @@ public class GenreController {
 
     //Update genre
     @PutMapping("/{id}")
-    public ResponseEntity<GenreDTO> updateGenre (@PathVariable Long id, @RequestBody GenreDTO genreDTO){
-        GenreDTO updateGenre = genreService.updateGenre(id,genreDTO);
+    public ResponseEntity<GenreDTO> updateGenre(@PathVariable Long id, @RequestBody GenreDTO genreDTO) {
+        GenreDTO updateGenre = genreService.updateGenre(id, genreDTO);
         return ResponseEntity.ok().body(updateGenre);
     }
 
     //Delete genre
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteGenre (@PathVariable Long id){
+    public ResponseEntity<Void> deleteGenre(@PathVariable Long id) {
         genreService.deleteGenre(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }

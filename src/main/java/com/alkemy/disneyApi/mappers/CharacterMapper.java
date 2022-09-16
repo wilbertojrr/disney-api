@@ -19,7 +19,7 @@ public class CharacterMapper {
 
     //CharacterDTO to CharacterEntity
 
-    public CharacterEntity characterDTO2Entity (CharacterDTO dto){
+    public CharacterEntity characterDTO2Entity(CharacterDTO dto) {
 
         CharacterEntity characterEntity = new CharacterEntity();
         characterEntity.setImage(dto.getImage());
@@ -33,7 +33,7 @@ public class CharacterMapper {
     }
 
     // CharacterEntity to CharacterDTO
-    public CharacterDTO characterEntity2DTO (CharacterEntity characterEntity, boolean loadMovies){
+    public CharacterDTO characterEntity2DTO(CharacterEntity characterEntity, boolean loadMovies) {
         CharacterDTO characterDTO = new CharacterDTO();
         characterDTO.setId(characterEntity.getId());
         characterDTO.setHistory(characterEntity.getHistory());
@@ -42,8 +42,8 @@ public class CharacterMapper {
         characterDTO.setImage(characterEntity.getImage());
         characterDTO.setWeight(characterEntity.getWeight());
 
-        if(loadMovies){
-            List<MovieDTO> movieDTOList = movieMapper.movieEntityListToDTOList(characterEntity.getMovies(),false);
+        if (loadMovies) {
+            List<MovieDTO> movieDTOList = movieMapper.movieEntityListToDTOList(characterEntity.getMovies(), false);
             characterDTO.setMovieDTO(movieDTOList);
         }
 
@@ -51,11 +51,11 @@ public class CharacterMapper {
     }
 
     //CharacterDTO list to CharacterEntityList
-    public List<CharacterEntity> characterDTOList2EntityList (List<CharacterDTO> characterDTOS) {
+    public List<CharacterEntity> characterDTOList2EntityList(List<CharacterDTO> characterDTOS) {
 
         List<CharacterEntity> characterEntities = new ArrayList<>();
 
-        for (CharacterDTO dto : characterDTOS){
+        for (CharacterDTO dto : characterDTOS) {
             characterEntities.add(this.characterDTO2Entity(dto));
         }
         return characterEntities;
@@ -63,11 +63,11 @@ public class CharacterMapper {
 
     //CharacterEntity list to CharacterDTO List
 
-    public List<CharacterDTO> characterEntityList2DTOList (List<CharacterEntity> characterEntities, boolean loadMovies){
+    public List<CharacterDTO> characterEntityList2DTOList(List<CharacterEntity> characterEntities, boolean loadMovies) {
 
         List<CharacterDTO> characterDTOS = new ArrayList<>();
 
-        for (CharacterEntity entity : characterEntities){
+        for (CharacterEntity entity : characterEntities) {
             characterDTOS.add(this.characterEntity2DTO(entity, loadMovies));
         }
         return characterDTOS;
@@ -76,7 +76,7 @@ public class CharacterMapper {
     public List<CharacterBasicDTO> characterEntityToBasicDTOList(List<CharacterEntity> characterEntities) {
         List<CharacterBasicDTO> characterBasicDTOS = new ArrayList<>();
         CharacterBasicDTO characterBasicDTO;
-        for(CharacterEntity entity : characterEntities){
+        for (CharacterEntity entity : characterEntities) {
             characterBasicDTO = new CharacterBasicDTO();
             characterBasicDTO.setId(entity.getId());
             characterBasicDTO.setImage(entity.getImage());
